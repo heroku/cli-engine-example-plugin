@@ -1,7 +1,9 @@
 {
   "name": "cli-engine-example-plugin",
   "version": "1.0.0",
+  "author": "Jeff Dickey @dickeyxxxx",
   "dependencies": {
-    "heroku-cli-command": "0.1.4"
-  }
+    "heroku-cli-command": "^1.0.2"
+  },
+  "license": "ISC"
 }
