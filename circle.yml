@@ -22,6 +22,7 @@ stages:
           ./node_modules/.bin/jest --coverage
           ./node_modules/.bin/flow check
           ./node_modules/.bin/standard
+          yarn run prepare
 
       - type: test-results-store
         path: /tmp/test-results
