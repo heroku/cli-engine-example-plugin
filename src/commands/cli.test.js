@@ -4,7 +4,7 @@
    expect
  */
 
-import {CLICommand as CLI} from '.'
+import CLI from './cli'
 
 test('it runs the command', async () => {
   let cli = new CLI({mock: true})

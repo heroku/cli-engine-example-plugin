@@ -1,17 +1,10 @@
 // @flow
 
-import Command, {Topic} from 'cli-engine-command'
+import {Topic} from 'cli-engine-command'
 
-export class CLI extends Topic {
-  topic = 'cli'
-  description = 'example CLI engine topic'
-}
+export const topics = [
+  class CLI extends Topic { topic = 'cli'; description = 'example CLI engine topic' }
+]
 
-export class CLICommand extends Command {
-  static topic = 'cli'
-  static command = 'test'
-
-  run () {
-    this.log('ran cli:test')
-  }
-}
+import CLI from './commands/cli'
+export const commands = [CLI]
