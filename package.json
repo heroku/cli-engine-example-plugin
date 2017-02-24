@@ -3,7 +3,43 @@
   "version": "1.0.1",
   "author": "Jeff Dickey @dickeyxxxx",
   "dependencies": {
-    "heroku-cli-command": "^1.0.2"
+    "babel-runtime": "6.23.0",
+    "cli-engine-command": "2.0.2"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib --ignore '*.test.js'",
+    "clean": "rimraf lib",
+    "copy-flow": "flow-copy-source -v -i '*.test.js' src lib",
+    "prepare": "npm run clean && npm run build && npm run copy-flow",
+    "release": "np",
+    "test": "jest && flow && standard && npm run prepare"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "./src"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "lib",
+      "flow-typed"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "babel-jest": "19.0.0",
+    "babel-plugin-transform-async-to-generator": "6.22.0",
+    "babel-plugin-transform-class-properties": "6.23.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "6.22.0",
+    "flow-bin": "0.40.0",
+    "flow-copy-source": "1.1.0",
+    "flow-typed": "2.0.0",
+    "jest": "19.0.2",
+    "rimraf": "2.6.0",
+    "standard": "8.6.0"
+  }
 }
