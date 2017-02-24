@@ -1,0 +1,29 @@
+---
+version: 2
+executorType: docker
+containerInfo:
+  - image: dickeyxxx/cli-engine:latest
+stages:
+  build:
+    workDir: ~/cli-engine
+    environment:
+      - CIRCLE_PROJECT_USERNAME: dickeyxxx
+      - CIRCLE_PROJECT_REPONAME: cli-engine-plugin-example
+      - HEROKU_DEBUG: 1
+    steps:
+      - type: checkout
+      - type: cache-restore
+        key: cli-engine-{{checksum "package.json"}}
+      - type: shell
+        command: |
+          set -exu
+
+          yarn --prefer-offline --pure-lockfile
+          yarn test
+
+      - type: test-results-store
+        path: /tmp/test-results
+      - type: cache-save
+        key: cli-engine-{{checksum "package.json"}}
+        paths:
+          - /usr/local/share/.cache/yarn
