@@ -1,6 +1,6 @@
 {
   "name": "cli-engine-example-plugin",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "author": "Jeff Dickey @dickeyxxxx",
   "dependencies": {
     "babel-runtime": "6.23.0",
