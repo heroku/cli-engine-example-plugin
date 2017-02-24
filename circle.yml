@@ -19,7 +19,7 @@ stages:
           set -exu
 
           yarn --prefer-offline --pure-lockfile
-          ./node_modules/.bin/jest --coverage
+          ./node_modules/.bin/jest
           ./node_modules/.bin/flow check
           ./node_modules/.bin/standard
           yarn run prepare
