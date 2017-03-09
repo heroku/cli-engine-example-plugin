@@ -8,6 +8,6 @@ export default class extends Command {
   static help = 'this is an example command for cli-engine'
 
   run () {
-    this.log('ra cli:test')
+    this.log('ran cli:test')
   }
 }
