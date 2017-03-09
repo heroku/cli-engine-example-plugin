@@ -3,7 +3,7 @@
   "version": "2.0.4",
   "author": "Jeff Dickey @dickeyxxxx",
   "dependencies": {
-    "cli-engine-command": "2.0.10"
+    "cli-engine-command": "^2.0.11"
   },
   "license": "ISC",
   "main": "lib/index.js",
