@@ -1,12 +1,8 @@
 {
-  "presets": [
-    "es2015",
-  ],
   "plugins": [
     "transform-flow-strip-types",
-    "transform-async-to-generator",
-    "transform-class-properties",
-    "transform-runtime"
+    "transform-es2015-modules-commonjs",
+    "transform-class-properties"
   ]
 }
 
