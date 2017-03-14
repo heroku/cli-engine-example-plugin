@@ -35,6 +35,11 @@
   },
   "standard": {
     "parser": "babel-eslint",
+    "env": "jest",
+    "globals": [
+      "Class",
+      "$Shape"
+    ],
     "ignore": [
       "lib",
       "flow-typed"
