@@ -5,6 +5,24 @@
   "dependencies": {
     "cli-engine-command": "^2.0.11"
   },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "7.1.1",
+    "babel-jest": "19.0.0",
+    "babel-plugin-transform-class-properties": "6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "flow-bin": "0.41.0",
+    "flow-copy-source": "1.1.0",
+    "flow-typed": "2.0.0",
+    "jest": "19.0.2",
+    "rimraf": "2.6.1",
+    "standard": "9.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "./src"
+  },
   "license": "ISC",
   "main": "lib/index.js",
   "scripts": {
@@ -15,29 +33,11 @@
     "release": "np",
     "test": "jest && flow && standard && npm run prepare"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "rootDir": "./src"
-  },
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
       "lib",
       "flow-typed"
     ]
-  },
-  "devDependencies": {
-    "babel-cli": "6.23.0",
-    "babel-eslint": "7.1.1",
-    "babel-jest": "19.0.0",
-    "babel-plugin-transform-class-properties": "6.23.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
-    "babel-plugin-transform-flow-strip-types": "6.22.0",
-    "flow-bin": "0.41.0",
-    "flow-copy-source": "1.1.0",
-    "flow-typed": "2.0.0",
-    "jest": "19.0.2",
-    "rimraf": "2.6.1",
-    "standard": "9.0.1"
   }
 }
