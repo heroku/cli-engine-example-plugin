@@ -1,4 +1,4 @@
-// @ flow
+// @flow
 
 import Command from 'cli-engine-command'
 import DurationMixin from '../mixins/duration'
@@ -9,6 +9,6 @@ export default class extends DurationMixin(Command) {
   static description = 'this is an example command showing duration parsing'
 
   run () {
-    this.log(`duration: ${this.duration}`)
+    this.log(`duration: ${this.duration.toString()}`)
   }
 }
