@@ -9,14 +9,13 @@ export const FLAG = {
   hasValue: true
 }
 
-export default class DurationMixin {
+export default class Duration {
   cmd: Command
   constructor (cmd: Command) {
     this.cmd = cmd
   }
 
   get duration (): Date {
-    // this is a little gross but I think needed to cast it to a string
     let duration = this.cmd.flags.duration
     return new Date(duration)
   }
