@@ -11,11 +11,11 @@ export default class extends Command {
   static flags = [
     DurationFlag
   ]
+  duration = new Duration(this)
   run() {
-    let duration = new Duration(this)
     for(let i = 1; i <= 10; i++){
       console.log('#')
     }
-    console.log(`Hypothetically, you could have this command abort if it took longer than your supplied ${duration.duration} ms`)
+    console.log(`Hypothetically, you could have this command abort if it took longer than your supplied ${this.duration.duration} ms`)
   }
 }

@@ -13,7 +13,6 @@ export default class Duration {
   cmd: Command
   constructor (cmd: Command) {
     this.cmd = cmd
-    // setTimeout(this.cmd.reject, this.parse(this.cmd.flags.duration))
   }
   parse(arg : string){
     let result = arg.match(/^(\d+) ?(ms|[sm]|milliseconds?|seconds?|minutes?)$/);
