@@ -20,7 +20,7 @@ export default class extends Command {
   main () {
     return new Promise(resolve => {
       setTimeout(() => {
-        console.log('Done restarting dynos');
+        console.log('Done restarting dynos')
         resolve()
       }, 5000)
     })
