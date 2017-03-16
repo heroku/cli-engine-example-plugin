@@ -9,5 +9,5 @@ export const topics = [
 
 export const commands = [
   require('./commands/cli'),
-  require('./commands/printbricks')
+  require('./commands/dynorestart')
 ]
