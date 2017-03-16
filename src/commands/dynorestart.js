@@ -10,8 +10,8 @@ export default class extends Command {
   static flags = [
     DurationFlag
   ]
-  duration = new Duration(this)
   async wait(ms: number) {  return new Promise(resolve => setTimeout(resolve, ms)) }
+  duration = new Duration(this)
 
   run () {
     console.log('Restarting dynos. This will take five seconds. That is too long')
