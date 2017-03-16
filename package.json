@@ -33,6 +33,7 @@
     "release": "np",
     "test": "jest && flow && standard && npm run prepare"
   },
+  "keywords": [ "heroku-plugin" ],
   "standard": {
     "parser": "babel-eslint",
     "env": "jest",
