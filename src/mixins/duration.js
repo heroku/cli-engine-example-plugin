@@ -17,36 +17,36 @@ export default class Duration {
   }
 
   parse (arg: string) {
-    let result = arg.match(/^(\d+) ?(ms|[sm]|milliseconds?|seconds?|minutes?)$/);
+    let result = arg.match(/^(\d+) ?(ms|[sm]|milliseconds?|seconds?|minutes?)$/)
     if (result) {
-      let magnitude = parseInt(result[1]);
-      let unit = result[2];
-      let multiplier = 1;
+      let magnitude = parseInt(result[1])
+      let unit = result[2]
+      let multiplier = 1
       switch (unit) {
         case 'ms':
         case 'millisecond':
         case 'milliseconds':
-          multiplier = 1;
-          break;
+          multiplier = 1
+          break
         case 's':
         case 'second':
         case 'seconds':
-          multiplier = 1000;
-          break;
+          multiplier = 1000
+          break
         case 'm':
         case 'minute':
         case 'minutes':
-          multiplier = 1000 * 60;
-          break;
+          multiplier = 1000 * 60
+          break
         default:
       }
-      return magnitude * multiplier;
+      return magnitude * multiplier
     }
   }
 
   wait () {
     return new Promise(resolve => setTimeout(() => {
-      console.log('operation did not complete in provided duration');
+      console.log('operation did not complete in provided duration')
       resolve()
     }, this.parse(this.cmd.flags.duration)))
   }
