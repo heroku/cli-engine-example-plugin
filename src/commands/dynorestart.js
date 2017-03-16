@@ -1,7 +1,7 @@
 // @flow
 
 import Command from 'cli-engine-command'
-import { Duration, FLAG as DurationFlag } from '../mixins/duration'
+import { default as Duration, FLAG as DurationFlag } from '../mixins/duration'
 
 export default class extends Command {
   static topic = 'cli'
