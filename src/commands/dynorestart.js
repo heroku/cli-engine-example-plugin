@@ -11,18 +11,16 @@ export default class extends Command {
     DurationFlag
   ]
   duration = new Duration(this)
+  wait = async function wait(ms: int) {  return new Promise(resolve => setTimeout(resolve, ms)) }
 
   run () {
     console.log('Restarting dynos. This will take five seconds. That is too long')
     return Promise.race([this.duration.wait(), this.main()])
   }
 
-  main () {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        console.log('Done restarting dynos')
-        resolve()
-      }, 5000)
-    })
+
+  async main () {
+    await this.wait(5000)
+    console.log('Done restarting dynos')
   }
 }
