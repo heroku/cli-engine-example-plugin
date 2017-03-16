@@ -12,11 +12,11 @@ export const FLAG = {
 export default class Duration {
   cmd: Command
 
-  constructor(cmd: Command) {
+  constructor (cmd: Command) {
     this.cmd = cmd
   }
 
-  parse(arg: string) {
+  parse (arg: string) {
     let result = arg.match(/^(\d+) ?(ms|[sm]|milliseconds?|seconds?|minutes?)$/);
     if (result) {
       let magnitude = parseInt(result[1]);
@@ -44,14 +44,14 @@ export default class Duration {
     }
   }
 
-  wait() {
+  wait () {
     return new Promise(resolve => setTimeout(() => {
       console.log('operation did not complete in provided duration');
       resolve()
     }, this.parse(this.cmd.flags.duration)))
   }
 
-  get duration(): number {
+  get duration (): number {
     let duration = this.parse(this.cmd.flags.duration)
     return Number(duration)
   }

@@ -1,8 +1,7 @@
 // @flow
 
 import Command from 'cli-engine-command'
-import Duration from '../mixins/duration'
-import {FLAG as DurationFlag} from '../mixins/duration'
+import { Duration, FLAG as DurationFlag } from '../mixins/duration'
 
 export default class extends Command {
   static topic = 'cli'
@@ -13,12 +12,12 @@ export default class extends Command {
   ]
   duration = new Duration(this)
 
-  run() {
+  run () {
     console.log('Restarting dynos. This will take five seconds. That is too long')
     return Promise.race([this.duration.wait(), this.main()])
   }
 
-  main() {
+  main () {
     return new Promise(resolve => {
       setTimeout(() => {
         console.log('Done restarting dynos');
