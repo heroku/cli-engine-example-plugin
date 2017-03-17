@@ -46,8 +46,8 @@ export default class Duration {
   async sleep (ms: number) { return new Promise(resolve => setTimeout(resolve, ms)) }
 
   async wait () {
-
-    let resolved = await this.sleep(this.parse(this.cmd.flags.duration))
+    let ms = this.parse(this.cmd.duration)
+    let resolved = await this.sleep(ms)
     console.log('operation did not complete in provided duration')
     return resolved
   }
