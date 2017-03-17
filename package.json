@@ -23,6 +23,9 @@
     "testEnvironment": "node",
     "rootDir": "./src"
   },
+  "keywords": [
+    "heroku-plugin"
+  ],
   "license": "ISC",
   "main": "lib/index.js",
   "scripts": {

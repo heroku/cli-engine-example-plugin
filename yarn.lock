@@ -573,6 +573,7 @@ cli-cursor@^1.0.1:
   dependencies:
     restore-cursor "^1.0.1"
 
+
 cli-engine-command@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/cli-engine-command/-/cli-engine-command-2.1.4.tgz#54a4196968a1a58b43084aa323b6045aadf2ba5f"
@@ -589,6 +590,7 @@ cli-engine-command@^2.1.4:
     pretty-format "^19.0.0"
     string "^3.3.3"
     supports-color "^3.2.3"
+
 
 cli-width@^2.0.0:
   version "2.1.0"
