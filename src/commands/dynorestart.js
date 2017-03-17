@@ -10,14 +10,15 @@ export default class extends Command {
   static flags = [
     DurationFlag
   ]
-  async wait(ms: number) {  return new Promise(resolve => setTimeout(resolve, ms)) }
+
+  async wait (ms: number) { return new Promise(resolve => setTimeout(resolve, ms)) }
+
   duration = new Duration(this)
 
   run () {
     console.log('Restarting dynos. This will take five seconds. That is too long')
     return Promise.race([this.duration.wait(), this.main()])
   }
-
 
   async main () {
     await this.wait(5000)
