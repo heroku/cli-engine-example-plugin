@@ -43,12 +43,13 @@ export default class Duration {
       return magnitude * multiplier
     }
   }
+  async sleep (ms: number) { return new Promise(resolve => setTimeout(resolve, ms)) }
 
   async wait () {
-    return new Promise(resolve => setTimeout(resolve, this.parse(this.cmd.flags.duration)))
-      .then(() => {
-        console.log('operation did not complete in provided duration')
-      })
+
+    let resolved = await this.sleep(this.parse(this.cmd.flags.duration))
+    console.log('operation did not complete in provided duration')
+    return resolved
   }
 
   get duration (): number {

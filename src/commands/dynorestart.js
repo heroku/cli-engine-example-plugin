@@ -11,7 +11,7 @@ export default class extends Command {
     DurationFlag
   ]
 
-  async wait (ms: number) { return new Promise(resolve => setTimeout(resolve, ms)) }
+  async sleep (ms: number) { return new Promise(resolve => setTimeout(resolve, ms)) }
 
   duration = new Duration(this)
 
@@ -21,7 +21,7 @@ export default class extends Command {
   }
 
   async main () {
-    await this.wait(5000)
+    await this.sleep(5000)
     console.log('Done restarting dynos')
   }
 }
