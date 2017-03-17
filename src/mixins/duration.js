@@ -45,7 +45,6 @@ export default class Duration {
   }
 
   async wait () {
-    console.log(`current version of node is ${process.version}`)
     return new Promise(resolve => setTimeout(resolve, this.parse(this.cmd.flags.duration)))
       .then(() => {
         console.log('operation did not complete in provided duration')
