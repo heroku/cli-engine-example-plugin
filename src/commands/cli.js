@@ -13,7 +13,7 @@ Example:
  $ cli-engine-example cli:test
  ran cli:test`
 
-  run () {
+  async run () {
     this.log('ran cli:test')
   }
 }
