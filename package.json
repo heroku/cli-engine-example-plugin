@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "author": "Jeff Dickey @dickeyxxxx",
   "dependencies": {
-    "cli-engine-command": "2.2.4"
+    "cli-engine-command": "2.2.5"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
