@@ -14,6 +14,6 @@ Example:
  ran cli:test`
 
   async run () {
-    this.log('ran cli:test')
+    this.out.log('ran cli:test')
   }
 }
