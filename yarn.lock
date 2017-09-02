@@ -766,9 +766,9 @@ cli-cursor@^2.1.0:
   dependencies:
     restore-cursor "^2.0.0"
 
-cli-engine-command@^7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/cli-engine-command/-/cli-engine-command-7.0.4.tgz#92235edd173b707efc50494b58c3f98f2e7e7021"
+cli-engine-command@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/cli-engine-command/-/cli-engine-command-7.0.5.tgz#794b6441d1a4e2a575ea65dc6a969e2bdcf92347"
   dependencies:
     ansi-escapes "2.x"
     cardinal "1.x"
@@ -789,9 +789,9 @@ cli-engine-command@^7.0.4:
     string "3.x"
     supports-color "^4.4.0"
 
-cli-engine-config@^1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/cli-engine-config/-/cli-engine-config-1.6.4.tgz#0eec451eb19bce7bcaf75d7e4d8bbeadde3e48f6"
+cli-engine-config@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/cli-engine-config/-/cli-engine-config-1.7.0.tgz#418e51bb8f3b578c65d957350f69adee31695510"
   dependencies:
     fs-extra "^4.0.1"
     jest-validate "^20.0.3"
