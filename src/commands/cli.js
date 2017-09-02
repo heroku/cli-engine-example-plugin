@@ -2,7 +2,7 @@
 
 import Command from 'cli-engine-command'
 
-export default class extends Command {
+export default class extends Command<*> {
   static topic = 'cli'
   static command = 'test'
   static description = 'this is an example command for cli-engine'
