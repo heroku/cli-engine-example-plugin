@@ -1,6 +1,6 @@
 {
   "name": "cli-engine-example-plugin",
-  "version": "0.0.0",
+  "version": "2.1.4",
   "cli-engine": {
     "commandsDir": "./lib/commands"
   },
