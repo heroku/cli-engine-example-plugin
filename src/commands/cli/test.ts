@@ -1,8 +1,7 @@
-// @flow
+import { cli } from 'cli-ux'
+import { Command } from 'cli-engine-command'
 
-import Command from 'cli-engine-command'
-
-export default class extends Command<*> {
+export default class extends Command {
   static topic = 'cli'
   static command = 'test'
   static description = 'this is an example command for cli-engine'
@@ -13,7 +12,7 @@ Example:
  $ cli-engine-example cli:test
  ran cli:test`
 
-  async run () {
-    this.out.log('ran cli:test')
+  async run() {
+    cli.log('ran cli:test')
   }
 }

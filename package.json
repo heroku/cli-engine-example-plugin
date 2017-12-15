@@ -1,44 +1,42 @@
 {
   "name": "cli-engine-example-plugin",
-  "version": "2.1.4",
-  "author": "Jeff Dickey @dickeyxxxx",
+  "version": "0.0.0",
+  "cli-engine": {
+    "commandsDir": "./lib/commands"
+  },
   "dependencies": {
-    "cli-engine-command": "^7.0.5",
-    "cli-engine-config": "^1.7.0"
+    "cli-engine-command": "10.0.2",
+    "cli-ux": "^2.0.5"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-flow-strip-types": "6.22.0",
-    "eslint": "^4.6.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-flowtype": "^2.35.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^20.0.3",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "flow-bin": "^0.54.0",
-    "flow-copy-source": "^1.2.1",
-    "flow-typed": "^2.1.5",
-    "jest": "20.0.4",
-    "rimraf": "2.6.1"
+    "@types/execa": "^0.8.0",
+    "@types/fs-extra": "^5.0.0",
+    "@types/jest": "^21.1.8",
+    "@types/lodash.flatten": "^4.4.3",
+    "@types/node": "^8.0.58",
+    "@types/supports-color": "^3.1.0",
+    "del-cli": "^1.1.0",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^6.0.0",
+    "np": "^2.8.1",
+    "prettier": "^1.9.2",
+    "ts-jest": "^21.2.4",
+    "typescript": "^2.6.2"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "rootDir": "./src"
-  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "heroku-plugin"
+  ],
   "license": "ISC",
-  "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib --ignore '*.test.js'",
-    "clean": "rimraf lib",
-    "copy-flow": "flow-copy-source -v -i '**/*.test.js' src lib",
-    "prepare": "npm run clean && npm run build && npm run copy-flow",
+    "posttest": "prettier -l 'src/**/*.ts'",
+    "precommit": "lint-staged",
+    "prepare": "del-cli lib && tsc && del-cli \"lib/**/*.test.+(d.ts|js)\"",
+    "pretest": "tsc",
     "release": "np",
-    "test": "jest && flow && eslint . && npm run prepare"
+    "test": "jest"
   }
 }
