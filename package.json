@@ -5,7 +5,9 @@
     "commandsDir": "./lib/commands"
   },
   "dependencies": {
-    "cli-engine-command": "11.0.9",
+    "cli-engine-command": "11.0.10",
+    "cli-engine-config": "^5.0.6",
+    "cli-flags": "^2.0.3",
     "cli-ux": "^2.0.12"
   },
   "devDependencies": {
