@@ -5,10 +5,10 @@
     "commands": "./lib/commands"
   },
   "dependencies": {
-    "cli-engine-command": "11.0.10",
-    "cli-engine-config": "^5.0.6",
+    "cli-engine-command": "11.0.14",
+    "cli-engine-config": "^5.0.9",
     "cli-flags": "^2.0.3",
-    "cli-ux": "^2.0.12"
+    "cli-ux": "^2.0.14"
   },
   "devDependencies": {
     "@types/execa": "^0.8.0",
