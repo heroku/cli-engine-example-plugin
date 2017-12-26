@@ -1,5 +1,5 @@
+import { Command } from '@cli-engine/command'
 import { cli } from 'cli-ux'
-import { Command } from 'cli-engine-command'
 
 export default class extends Command {
   static topic = 'cli'

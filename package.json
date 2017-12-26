@@ -5,24 +5,25 @@
     "commands": "./lib/commands"
   },
   "dependencies": {
-    "cli-engine-command": "11.0.14",
-    "cli-engine-config": "^5.0.9",
+    "@cli-engine/command": "^11.0.0-beta.3",
+    "@cli-engine/config": "^5.0.0-beta.4",
+    "@cli-engine/util": "^1.0.4",
     "cli-flags": "^2.0.3",
-    "cli-ux": "^2.0.14"
+    "cli-ux": "^2.0.15"
   },
   "devDependencies": {
+    "@heroku-cli/tslint": "^1.0.3",
     "@types/execa": "^0.8.0",
     "@types/fs-extra": "^5.0.0",
     "@types/jest": "^21.1.9",
     "@types/lodash.flatten": "^4.4.3",
     "@types/node": "^8.5.2",
     "@types/supports-color": "^3.1.0",
-    "del-cli": "^1.1.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
-    "lint-staged": "^6.0.0",
     "prettier": "^1.9.2",
     "ts-jest": "^22.0.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.2"
   },
   "files": [
@@ -33,11 +34,10 @@
   ],
   "license": "ISC",
   "scripts": {
-    "posttest": "prettier -l 'src/**/*.ts'",
-    "precommit": "lint-staged",
-    "prepare": "del-cli lib && tsc && del-cli \"lib/**/*.test.+(d.ts|js)\"",
+    "posttest": "cli-engine-util",
+    "precommit": "cli-engine-util",
+    "prepare": "cli-engine-util",
     "pretest": "tsc",
-    "release": "np",
     "test": "jest"
   }
 }
