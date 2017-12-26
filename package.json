@@ -2,7 +2,7 @@
   "name": "cli-engine-example-plugin",
   "version": "3.0.2",
   "cli-engine": {
-    "commandsDir": "./lib/commands"
+    "commands": "./lib/commands"
   },
   "dependencies": {
     "cli-engine-command": "11.0.10",
