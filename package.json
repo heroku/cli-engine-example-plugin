@@ -5,18 +5,18 @@
     "commands": "./lib/commands"
   },
   "dependencies": {
-    "@cli-engine/command": "^11.0.0-beta.3",
-    "@cli-engine/config": "^5.0.0-beta.4",
-    "@cli-engine/util": "^1.0.4",
-    "cli-flags": "^2.0.3",
-    "cli-ux": "^2.0.15"
+    "@cli-engine/command": "^11.0.0-beta.4",
+    "@cli-engine/config": "^5.0.0-beta.5",
+    "@cli-engine/util": "^1.0.5",
+    "cli-flags": "^2.0.4",
+    "cli-ux": "^2.0.15",
+    "http-call": "^4.0.6"
   },
   "devDependencies": {
     "@heroku-cli/tslint": "^1.0.3",
     "@types/execa": "^0.8.0",
     "@types/fs-extra": "^5.0.0",
     "@types/jest": "^21.1.9",
-    "@types/lodash.flatten": "^4.4.3",
     "@types/node": "^8.5.2",
     "@types/supports-color": "^3.1.0",
     "husky": "^0.14.3",

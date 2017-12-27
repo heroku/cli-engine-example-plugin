@@ -1,9 +1,0 @@
-yarn.lock
-.envrc
-.npmignore
-flow-typed
-.babelrc
-.flowconfig
-src
-coverage
-circle.yml
