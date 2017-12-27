@@ -12,7 +12,7 @@
     "http-call": "^4.0.6"
   },
   "devDependencies": {
-    "@cli-engine/util": "^1.0.7",
+    "@cli-engine/util": "^1.0.8",
     "@heroku-cli/tslint": "^1.0.3",
     "@types/ansi-styles": "^2.0.30",
     "@types/execa": "^0.8.0",
