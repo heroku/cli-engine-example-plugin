@@ -1,21 +1,39 @@
 ---
 version: 2
 jobs:
-  build:
+  node-latest: &test-build
     docker:
-      - image: node:9
-    working_directory: ~/cli-plugin
+      - image: node:latest
+    working_directory: /cli
     steps:
       - checkout
       - restore_cache:
           keys:
-            - yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn
+            - v0-yarn-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{checksum "yarn.lock"}}
+            - v0-yarn-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-
+            - v0-yarn-{{ .Environment.CIRCLE_JOB }}-master
       - run: yarn
       - run: yarn test --coverage
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: curl -s https://codecov.io/bash | bash
       - save_cache:
-          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: v0-yarn-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{checksum "yarn.lock"}}
           paths:
-            - node_modules
+            - /cli/node_modules
             - /usr/local/share/.cache/yarn
+            - /root/.cache/cli-engine/yarn
+  node-8:
+    <<: *test-build
+    docker:
+      - image: node:8
+  node-6:
+    <<: *test-build
+    docker:
+      - image: node:6
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - node-latest
+      - node-8
+      - node-6
