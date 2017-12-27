@@ -10,13 +10,6 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@cli-engine/command@^11.0.0-beta.3":
-  version "11.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@cli-engine/command/-/command-11.0.0-beta.3.tgz#0c36ad9124c073004bc89668b3a59ae01f6b40d7"
-  dependencies:
-    chalk "^2.3.0"
-    cli-flags "^2.0.3"
-
 "@cli-engine/command@^11.0.0-beta.4":
   version "11.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@cli-engine/command/-/command-11.0.0-beta.4.tgz#b0d1510a8ca61f8a7c26bf9190ac1b9545475305"
@@ -24,48 +17,45 @@
     chalk "^2.3.0"
     cli-flags "^2.0.4"
 
-"@cli-engine/config@^5.0.0-beta.4":
-  version "5.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@cli-engine/config/-/config-5.0.0-beta.4.tgz#c61dd31b92163e986b3c8f102c823d31c997ae79"
-
 "@cli-engine/config@^5.0.0-beta.5":
   version "5.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/@cli-engine/config/-/config-5.0.0-beta.5.tgz#bbb683111b7736b477ee745b958450c9a4f566d0"
 
-"@cli-engine/engine@^5.0.0-beta.1":
-  version "5.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@cli-engine/engine/-/engine-5.0.0-beta.1.tgz#cb6b7ab910e2efd738157132e40369d265e0d67c"
+"@cli-engine/engine@^6.1.5":
+  version "6.1.6"
+  resolved "https://registry.yarnpkg.com/@cli-engine/engine/-/engine-6.1.6.tgz#98a43a8d61e2cc974e727281fe49d325659f93a0"
   dependencies:
-    "@heroku-cli/color" "^1.0.3"
-    assync "^1.0.3"
-    cli-ux "^2.0.15"
+    "@heroku-cli/color" "^1.0.4"
+    assync "^1.0.4"
+    cli-ux "^2.0.16"
     debug "^3.1.0"
     fs-extra "^5.0.0"
     graceful-fs "^4.1.11"
-    http-call "^4.0.5"
+    http-call "^4.0.6"
     klaw "^2.1.1"
-    log-chopper "^1.0.1"
+    log-chopper "^1.0.2"
     moment "^2.20.1"
-    rwlockfile "^1.4.11"
+    rwlockfile "^1.4.12"
     semver "5.4.1"
     string-similarity "^1.2.0"
     strip-ansi "4.0.0"
     ts-lodash "4.0.8"
 
-"@cli-engine/util@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@cli-engine/util/-/util-1.0.5.tgz#a77d2fe637b88911c6c43d326bae5809dcd50274"
+"@cli-engine/util@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@cli-engine/util/-/util-1.0.6.tgz#8fb1804da11a89468d49fecf6239023d849914bf"
   dependencies:
-    "@cli-engine/command" "^11.0.0-beta.3"
-    "@cli-engine/config" "^5.0.0-beta.4"
-    "@cli-engine/engine" "^5.0.0-beta.1"
-    cli-ux "^2.0.15"
+    "@cli-engine/command" "^11.0.0-beta.4"
+    "@cli-engine/config" "^5.0.0-beta.5"
+    "@cli-engine/engine" "^6.1.5"
+    cli-ux "^2.0.16"
     del "^3.0.0"
     fs-extra "^5.0.0"
+    tslib "^1.8.1"
 
-"@heroku-cli/color@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/color/-/color-1.0.3.tgz#f94866b351f20771ee958f07c790011ceb36c066"
+"@heroku-cli/color@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/color/-/color-1.0.4.tgz#8d55cd9fd74c9f5b0b22ecb621ef52121206cd77"
   dependencies:
     ansi-styles "^3.2.0"
     chalk "^2.3.0"
@@ -267,9 +257,9 @@ assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
 
-assync@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/assync/-/assync-1.0.3.tgz#abfac18b29cdd51aa062b9dba4e2ceaaf3063f58"
+assync@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/assync/-/assync-1.0.4.tgz#9814eb9a3af234988e0a750568865d2018047637"
 
 astral-regex@^1.0.0:
   version "1.0.0"
@@ -696,13 +686,6 @@ ci-info@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.0.0.tgz#dc5285f2b4e251821683681c381c3388f46ec534"
 
-cli-flags@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/cli-flags/-/cli-flags-2.0.3.tgz#4bdcfb5e065f0a25dc74870290d90393c00e7c71"
-  dependencies:
-    "@heroku/linewrap" "^1.0.0"
-    ts-lodash "^4.0.8"
-
 cli-flags@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/cli-flags/-/cli-flags-2.0.4.tgz#bc8fcd1971d9843db50e5a97936e45287add0fc9"
@@ -710,11 +693,11 @@ cli-flags@^2.0.4:
     "@heroku/linewrap" "^1.0.0"
     ts-lodash "^4.0.8"
 
-cli-ux@^2.0.15:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.15.tgz#a8be9f83e64d94331394bd4af7a9ecf501a16ff4"
+cli-ux@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.16.tgz#55ad2767e727974d960c0963dcc04241f71df48c"
   dependencies:
-    "@heroku-cli/color" "^1.0.3"
+    "@heroku-cli/color" "^1.0.4"
     "@heroku/linewrap" "^1.0.0"
     ansi-escapes "^3.0.0"
     ansi-styles "^3.2.0"
@@ -785,7 +768,7 @@ content-type-parser@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/content-type-parser/-/content-type-parser-1.0.1.tgz#c3e56988c53c65127fb46d4032a3a900246fdc94"
 
-content-type@1.0.4, content-type@^1.0.4:
+content-type@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
 
@@ -1449,16 +1432,6 @@ html-encoding-sniffer@^1.0.1:
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-1.0.1.tgz#79bf7a785ea495fe66165e734153f363ff5437da"
   dependencies:
     whatwg-encoding "^1.0.1"
-
-http-call@^4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/http-call/-/http-call-4.0.5.tgz#1d95c1827e4b288b1ae1ebbbb6df82af5a205380"
-  dependencies:
-    content-type "1.0.4"
-    debug "^3.1.0"
-    is-retry-allowed "^1.1.0"
-    is-stream "^1.1.0"
-    tunnel-agent "^0.6.0"
 
 http-call@^4.0.6:
   version "4.0.6"
@@ -2166,9 +2139,9 @@ lodash@^4.13.1, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.2.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-log-chopper@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/log-chopper/-/log-chopper-1.0.1.tgz#85052864c888eb1fca91bc7b4565b68c7cfc952a"
+log-chopper@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/log-chopper/-/log-chopper-1.0.2.tgz#a88da7a47a9f0e511eda4d5e1dc840e0eaf4547a"
   dependencies:
     byline "5.x"
 
@@ -2919,9 +2892,9 @@ rimraf@~2.5.1, rimraf@~2.5.4:
   dependencies:
     glob "^7.0.5"
 
-rwlockfile@^1.4.11:
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/rwlockfile/-/rwlockfile-1.4.11.tgz#6c54079b70c2f2a2501c7d0877a8044681f1fdc2"
+rwlockfile@^1.4.12:
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/rwlockfile/-/rwlockfile-1.4.12.tgz#40cef17c915207c4315c1f535a006e0d1556bcd8"
   dependencies:
     fs-extra "^5.0.0"
 
