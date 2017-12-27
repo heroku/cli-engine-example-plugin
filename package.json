@@ -2,6 +2,11 @@
   "name": "cli-engine-example-plugin",
   "version": "3.0.8",
   "cli-engine": {
+    "topics": {
+      "cli": {
+        "description": "cli-engine example plugin"
+      }
+    },
     "commands": "./lib/commands"
   },
   "dependencies": {
