@@ -10,24 +10,25 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@cli-engine/command@^12.0.2":
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/@cli-engine/command/-/command-12.0.2.tgz#4e17b4753b6f5962c579e8186098cc49f1027f58"
+"@cli-engine/command@^12.0.3":
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/@cli-engine/command/-/command-12.0.3.tgz#4bf3c0a9d126ee6c412e26b3404a353c7db7401b"
   dependencies:
+    "@cli-engine/screen" "^0.0.0"
     chalk "^2.3.0"
-    cli-flags "^2.0.4"
+    cli-flags "^2.0.6"
 
 "@cli-engine/config@^5.0.10":
   version "5.0.10"
   resolved "https://registry.yarnpkg.com/@cli-engine/config/-/config-5.0.10.tgz#f8420b9c4cd44e4feafeb90165d9557168bb484c"
 
-"@cli-engine/engine@^6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@cli-engine/engine/-/engine-6.1.8.tgz#d8711a9f91136e2239d0c9bb846d2ee60899ca40"
+"@cli-engine/engine@^6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@cli-engine/engine/-/engine-6.1.9.tgz#9937edd007225a4f219fe8bab60673ead9340eb4"
   dependencies:
     "@heroku-cli/color" "^1.0.4"
     assync "^1.0.4"
-    cli-ux "^2.0.16"
+    cli-ux "^2.0.17"
     debug "^3.1.0"
     fs-extra "^5.0.0"
     graceful-fs "^4.1.11"
@@ -41,14 +42,19 @@
     strip-ansi "4.0.0"
     ts-lodash "4.0.8"
 
-"@cli-engine/util@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@cli-engine/util/-/util-1.0.8.tgz#c0b00b49bed996ebe49c7908924f0f47396ccb69"
+"@cli-engine/screen@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@cli-engine/screen/-/screen-0.0.0.tgz#c2e847c7d4d998490c9097282bf21637d5162116"
+
+"@cli-engine/util@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@cli-engine/util/-/util-1.0.9.tgz#f97b94083a9700a7e6af1b4561afe0b87f9ed87e"
   dependencies:
-    "@cli-engine/command" "^12.0.2"
+    "@cli-engine/command" "^12.0.3"
     "@cli-engine/config" "^5.0.10"
-    "@cli-engine/engine" "^6.1.8"
-    cli-ux "^2.0.16"
+    "@cli-engine/engine" "^6.1.9"
+    cli-ux "^2.0.17"
+    cross-spawn "^5.1.0"
     del "^3.0.0"
     fs-extra "^5.0.0"
     tslib "^1.8.1"
@@ -75,9 +81,9 @@
   version "2.0.30"
   resolved "https://registry.yarnpkg.com/@types/ansi-styles/-/ansi-styles-2.0.30.tgz#9a645299020a224afc6a8cd055195850b3c2af85"
 
-"@types/execa@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@types/execa/-/execa-0.8.0.tgz#2c717dbcb4a593e31c3b1d40180a0926f77f5355"
+"@types/execa@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@types/execa/-/execa-0.8.1.tgz#0a9398c7661015c7d6c8e09d1f0a4018d5002f6e"
   dependencies:
     "@types/node" "*"
 
@@ -87,9 +93,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jest@^21.1.9":
-  version "21.1.9"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.9.tgz#a913d6224e9d8a1f24908af536f65b5bf4d489bc"
+"@types/jest@^22.0.0":
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.0.0.tgz#23009941178aad7979a9591e026f7a96054d7bc0"
 
 "@types/node@*":
   version "8.5.1"
@@ -690,17 +696,19 @@ ci-info@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.0.0.tgz#dc5285f2b4e251821683681c381c3388f46ec534"
 
-cli-flags@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/cli-flags/-/cli-flags-2.0.4.tgz#bc8fcd1971d9843db50e5a97936e45287add0fc9"
+cli-flags@^2.0.6, cli-flags@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/cli-flags/-/cli-flags-2.0.7.tgz#215b3f8d911142c3e4833eaf7f2f96ab97fd22cf"
   dependencies:
+    "@cli-engine/screen" "^0.0.0"
     "@heroku/linewrap" "^1.0.0"
     ts-lodash "^4.0.8"
 
-cli-ux@^2.0.16:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.16.tgz#55ad2767e727974d960c0963dcc04241f71df48c"
+cli-ux@^2.0.17, cli-ux@^2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.21.tgz#a7231097af95356e79f5d6a380f04be889703083"
   dependencies:
+    "@cli-engine/screen" "^0.0.0"
     "@heroku-cli/color" "^1.0.4"
     "@heroku/linewrap" "^1.0.0"
     ansi-escapes "^3.0.0"
